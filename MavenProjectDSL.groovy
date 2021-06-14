@@ -4,10 +4,10 @@ job('First-Maven-Project-Via-DSL') {
         git("https://github.com/anshulc55/Jenkins_Upgradev3.git", 'master')
     }
     triggers {
-        scm('* * * * *')
+        scm('H/5 * * * *')
     }
     steps {
-        maven('clean package', 'maven-samples/single-module/pom.xml')
+        maven('package', 'maven-samples/single-module/pom.xml')
     }
     publishers {
         //archive the war file generated
